@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## Base de Datos
 
-La API trae su base de datos propia construida en PostgreSQl, para cargarla debe restaurar el archivo "bd_prueba" en algun gestor de base de datos, por ejemplo, en pgAdmin. En dicho archivo se encuentra las tablas con la información necesaria para el funcionamiento de la API.
+La API trae su base de datos propia construida en PostgreSQl, para cargarla debe restaurar el archivo "bd_script" en algun gestor de base de datos, por ejemplo, en pgAdmin. En dicho archivo se encuentra las tablas con la información necesaria para el funcionamiento de la API.
 
 ## Y si no tengo un gestor de base de datos?
 
