@@ -1,14 +1,15 @@
 import psycopg2
 from flask import jsonify
+import os
 
 def get_db_connection():
     try:
         connection = psycopg2.connect(
-            user="postgres",
-            password="password",
-            host="localhost",
-            port="5432",
-            database="store-carvajal"
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            host=os.getenv("DB_HOST"),
+            port=os.getenv("DB_PORT"),
+            database=os.getenv("DB_NAME")
         )
         return connection
     except psycopg2.Error as e:

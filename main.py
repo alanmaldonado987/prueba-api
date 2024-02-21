@@ -11,7 +11,7 @@ from utils.file_utils import allowedFile
 
 app = Flask(__name__)
 app.config["Upload_Foder"] = "static/uploads"
-app.config['SECRET_KEY'] = 'clave_secreta'
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 CORS(app)
 
 
