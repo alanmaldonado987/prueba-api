@@ -8,19 +8,42 @@ Esta es una API desarrollada en Flask que permite cargar archivos de Excel y hac
 
 ```bash
 pip install -r requirements.txt
+```
 
+## Base de Datos
 
-2. En dado caso de tener base de datos propia rellenar el archivo .env ubicado en el directorio raíz del proyecto y rellene las variables de entorno necesarias para la conexión a la base de datos PostgreSQL. Aquí tienes un ejemplo de las variables que podrías definir:
+La API trae su base de datos propia construida en PostgreSQl, para cargarla debe restaurar el archivo "bd_prueba" en algun gestor de base de datos, por ejemplo, en pgAdmin. En dicho archivo se encuentra las tablas con la información necesaria para el funcionamiento de la API.
 
+## Y si no tengo un gestor de base de datos?
+
+Si no tiene algún gestor de base de datos puede hacer uso de Postman, una aplicación americana que permite probar API's.
+
+## Como funciona la API?
+
+## Endpoints
+
+La API cuenta con 3 rutas protegidas para ser consumida:
+
+Login: IMPORTANTE!! las rutas están protegidas por lo que se deberá loguear, las credenciales son:
+User: alan1
+Password: prueba
 ```bash
-DB_USER=postgres
-DB_PASSWORD=password
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=store-carvajal
+http://localhost:5000/login
+```
 
-
-3. Ejecuta la aplicación Flask utilizando el siguiente comando:
-
+Upload: Al iniciar sesión la API devolverá un token, debe enviarlo en la petición en dado caso de usar postman, de lo contrario, esto se hará automáticamente. En este endpoint se subirá el archivo y se harán los calculos.
 ```bash
-flask --app main run
+http://127.0.0.1:5000/upload
+```
+
+Data: Aquí se podrán ver el resultado de los cálculos.
+```bash
+http://localhost:5000/data2
+```
+
+## Conexión y Visualización de datos en PowerBI 
+
+Para visualizar los resultados obtenidos por la API en powerBI, deberá consumir la API desde este ultimo, con el token y la dirección:
+```bash
+http://localhost:5000/data2
+```
