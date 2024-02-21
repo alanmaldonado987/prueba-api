@@ -1,10 +1,18 @@
-# API Flask para manejo de archivos y usuarios
+# API para manejo de archivos
 
-Esta es una API desarrollada en Flask que permite cargar archivos de Excel y hacer calculos estadisticos suministrados en una base de datos PostgreSQL.
+Esta es una API desarrollada en Phyton con Flask que permite cargar archivos de Excel y hacer calculos estadisticos suministrados en una base de datos PostgreSQL para luego ser visualizados en PowerBI.
+
+## Para clonar el proyecto:
+
+```bash
+git clone https://github.com/alanmaldonado987/prueba-api.git
+```
+ 
+o descargandolo directamente.
 
 ## Configuración
 
-1. Instala las dependencias del proyecto utilizando el siguiente comando:
+Instala las dependencias del proyecto utilizando el siguiente comando:
 
 ```bash
 pip install -r requirements.txt
